@@ -1,0 +1,130 @@
+.card-musica {
+    margin: 10px;
+    display: flex;
+    overflow: hidden;
+    border-radius: 10px;
+    flex-direction: column;
+    height: 26rem !important;
+    border: 2px solid white;
+    width: 17.5rem !important;
+    background-color: #3d4f51;
+}
+
+.imagem-container {
+    width: 100%;
+    height: 200px;
+    min-width: 80%;
+    overflow: hidden;
+    min-height: 100px;
+}
+
+.imagem {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.textos {
+    width: 85%;
+    padding: 10px;
+    background-color: #3d4f51;
+}
+
+.textos p {
+    margin: 0;
+    color: white;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.textos h1 {
+    width: 100%;
+    margin: 0;
+    color: white;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.textos h1,
+.textos p {
+    margin: 0;
+    color: white;
+}
+
+.textos span {
+    color: #FFDF94;
+}
+
+.botoes {
+    padding: 10px;
+    display: flex;
+    background-color: #3d4f51;
+    justify-content: space-between;
+}
+
+.botao {
+    margin: 0 5px;
+    border: none;
+    cursor: pointer;
+    background-color: lightgray;
+}
+
+.botoes button {
+    width: 45%;
+    border: none;
+    color: #fff;
+    max-width: 50%;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    align-self: flex-end;
+    transition: background-color 0.3s ease;
+}
+
+.botao:first-child {
+    background-color: #6C757D;
+}
+
+.botao:first-child:hover {
+    background-color: #363c42;
+}
+
+.botao:nth-child(2) {
+    background-color: #b9a26b;
+}
+
+.botao:nth-child(2):hover {
+    background-color: #756744;
+}
+
+@media screen and (max-width: 1700px) {
+    .card-musica {
+        width: 18vw;
+        height: 45vh;
+    }
+}
+
+@media screen and (max-width: 1450px) {
+    .card-musica {
+        width: 24vw;
+        height: 45vh;
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .card-musica {
+        width: 24vw;
+        height: 45vh;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .card-musica {
+        width: 35vw;
+        height: 45vh;
+    }
+}

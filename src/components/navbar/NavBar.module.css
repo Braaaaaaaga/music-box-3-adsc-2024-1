@@ -1,0 +1,46 @@
+.navbar {
+    top: 0;
+    left: 0;
+    height: 8vh;
+    width: 100vw;
+    z-index: 999;
+    display: flex;
+    max-height: 8vh;
+    min-height: 6vh;
+    padding: 0.6rem;
+    align-items: center;
+    background-color: #1e1e1e;
+    justify-content: space-between;
+}
+
+.logo-inicio,
+.logo-fim {
+    outline: none;
+    display: flex;
+    margin: 0 11rem;
+    max-height: 80%;
+    align-items: center;
+}
+
+.logo-inicio {
+    cursor: pointer;
+}
+
+.active {
+    background-color: #E3073C !important;
+}
+
+.navbar button {
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 0.8rem 3.6rem;
+    border-radius: 5px;
+    background-color: #dfa053;
+    transition: background-color 0.3s ease;
+}
+
+.navbar button:hover {
+    background-color: #a77940;
+}

@@ -1,0 +1,48 @@
+.content-musicas {
+    height: calc(100vh - 8vh);
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    justify-content: center;
+    align-content: flex-start;
+    background-image: linear-gradient(to top, #1e1e1e,
+            #252525);
+}
+
+.quadrado {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    justify-content: center;
+    margin: 0.2rem 0 0 0.4rem;
+}
+
+.content-musicas::after {
+    content: '';
+    height: 2rem;
+    flex-basis: 100%;
+}
+
+.content-musicas::before {
+    content: '';
+    height: 1rem;
+    flex-basis: 100%;
+}
+
+@media screen and (max-width: 1200px) {
+    .quadrado {
+        flex-basis: calc(99% - 20px);
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .quadrado {
+        flex-basis: calc(45% - 20px);
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .quadrado {
+        flex-basis: calc(100% - 20px);
+    }
+}
