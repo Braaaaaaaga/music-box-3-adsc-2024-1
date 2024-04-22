@@ -1,0 +1,25 @@
+.content {
+    display: flex;
+    padding: 0 1rem;
+    min-height: 100vh;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #1e1e1e;
+    background-image: linear-gradient(to top,
+            #1e1e1e, #252525);
+}
+
+.content h1 {
+    width: 100%;
+    color: #ffffff;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    justify-content: center;
+}
+
+.content img {
+    height: auto;
+    max-width: 100%;
+}

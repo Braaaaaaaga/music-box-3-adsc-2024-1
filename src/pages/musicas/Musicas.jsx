@@ -94,9 +94,7 @@ const Musicas = () => {
             <div className={styles["content-musicas"]}>
                 {/* Checa se cardsData possui dados e então mapeia cada objeto de dados para um componente CardMusica */}
                 {cardsData && cardsData.map((data, index) => (
-                    // Cada CardMusica é colocado dentro de um div com chave e estilos aplicados
                     <div key={index} className={styles["quadrado"]}>
-                        {/* Renderiza um CardMusica para cada conjunto de dados, passando as propriedades necessárias */}
                         <CardMusica
                             artista={data.artista}
                             nomeMusica={data.nomeMusica}
