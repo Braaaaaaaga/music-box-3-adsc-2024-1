@@ -1,43 +1,42 @@
-// Importa React da biblioteca react
 import React from "react";
-// Importa os estilos específicos deste componente
-import styles from "./CardMusica.module.css";
-// Importa uma imagem padrão para ser usada caso nenhuma imagem específica seja fornecida
-import capaImg from "../../utils/assets/capa.png";
+import styles from "./CardMusica.module.css"; // Aqui importamos estilos CSS para o nosso componente
+import transformarData from "../../utils/globals"; // Função para transformar a data
+import capaImg from "../../utils/assets/capa.png"; // Imagem padrão caso não tenha uma definida
 
-// Define o componente CardMusica como uma função que recebe propriedades
+/// Componente responsável por renderizar um cartão de música
 const CardMusica = ({
-    genero, artista, nomeMusica, anoLancamento, imagemSrc,
+    genero, // Gênero da música
+    artista, // Artista responsável
+    nomeMusica, // Nome da música
+    anoLancamento, // Ano em que foi lançada
+    imagemSrc, // Fonte da imagem da música
+    onClickBotaoDireita, // Função chamada quando o botão direito é clicado
+    onClickBotaoEsquerda // Função chamada quando o botão esquerdo é clicado
 }) => {
     return (
-        // Contêiner principal do cartão
-        <div className={styles["card-musica"]}>
-            {/* Contêiner para a imagem */}
+        <div className={styles["card-musica"]}> {/* O próprio cartão de música */}
+            {/* Seção da imagem */}
             <div className={styles["imagem-container"]}>
-                {/* Exibe a imagem da música; usa imagemSrc se fornecido, caso contrário usa capaImg */}
                 <img src={imagemSrc ? imagemSrc : capaImg} alt="Imagem"
                     className={styles["imagem"]} />
             </div>
-            {/* Contêiner para os textos */}
+            {/* Seção dos textos */}
             <div className={styles["textos"]}>
-                {/* Exibe o nome da música; se não fornecido, mostra "N/A" */}
                 <h1>{nomeMusica || "N/A"}</h1>
-                {/* Exibe o artista da música; se não fornecido, mostra "N/A" */}
                 <p><span>Artista:</span> {artista || "N/A"} </p>
-                {/* Exibe o gênero da música; se não fornecido, mostra "N/A" */}
                 <p><span>Gênero</span>: {genero || "N/A"} </p>
-                {/* Exibe o ano de lançamento da música; se não fornecido, mostra "N/A" */}
-                <p><span>Ano de Lançamento</span>: {anoLancamento || "N/A"} </p>
+                <p><span>Ano de Lançamento</span>:
+                    {transformarData(anoLancamento) || "N/A"} </p>
             </div>
-            {/* Contêiner para os botões */}
+            {/* Seção dos botões */}
             <div className={styles["botoes"]}>
-                {/* Botão para editar as informações da música */}
-                <button className={styles["botao"]}>Editar</button>
-                {/* Botão para excluir a música */}
-                <button className={styles["botao"]}>Excluir</button>
+                <button onClick={onClickBotaoEsquerda}
+                    className={styles["botao"]}>Editar</button>
+                <button onClick={onClickBotaoDireita}
+                    className={styles["botao"]}>Excluir</button>
             </div>
         </div>
     );
 };
-// Exporta o componente para que possa ser usado em outras partes da aplicação
+
 export default CardMusica;

@@ -8,9 +8,13 @@ import logo from "../../utils/assets/logo.svg";
 import NavBar from "../../components/navbar/NavBar";
 // Importa a imagem de fundo principal da página
 import imgPrincipal from "../../utils/assets/img-fundo-principal.png";
+import { useNavigate } from "react-router-dom";
+
 
 // Define o componente funcional Home
 const Home = () => {
+    const navigate = useNavigate();
+
     return (
         // Fragmento React para agrupar múltiplos elementos sem adicionar um nó extra ao DOM
         <>
@@ -27,8 +31,8 @@ const Home = () => {
                         Deixe a música <span> sair da caixa</span>
                     </h1>
                     {/* Botão de ação para "Começar", provavelmente leva o usuário a explorar ou se inscrever */}
-                    <button>Começar</button>
-                </div>
+                    <button onClick={() =>
+                        navigate("/musicas")}>Começar</button>                </div>
             </div>
         </>
     );
